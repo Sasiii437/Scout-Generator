@@ -33,61 +33,60 @@ Standard pace
 🔮 AI scouting report layer planned, with fallback support if credits expire.
 
 ## 📁 Project Structure
-# scout_generator/
-# │ 
-# ├── app.py                         # Main entry point
-# │
-# ├── event_processing/
-# │   ├── loader.py                  # Loads raw GRID JSON files
-# │   ├── normalizer.py              # Normalizes GRID events
-# │   ├── rounds.py                  # Groups events by round
-# │   ├── round_stats.py             # Round + player statistics
-# │   ├── strategy.py                # Strategy & playstyle detection
-# │
-# ├── data/
-# │   └── raw/
-# │       └── events_2629390/         # Sample GRID event data
-# │
-# ├── requirements.txt
-# └── README.md
+<pre>
+scout_generator/
+│ 
+├── app.py                         # Main entry point
+│
+├── event_processing/
+│   ├── loader.py                  # Loads raw GRID JSON files
+│   ├── normalizer.py              # Normalizes GRID events
+│   ├── rounds.py                  # Groups events by round
+│   ├── round_stats.py             # Round + player statistics
+│   ├── strategy.py                # Strategy & playstyle detection
+│├── data/
+│   └── raw/
+│       └── events_2629390/         # Sample GRID event data
+│
+├── requirements.txt
+└── README.md
+</pre>
 
 # ⚙️ Setup Instructions
 1️⃣ Clone the Repository
-'''
+<pre>
 git clone <your-github-repo-url>
 cd scout_generator
-'''
+</pre>
 
 # 2️⃣ Create & Activate Virtual Environment
 🪟 Windows
-'''
+<pre>
 python -m venv .venv
 .venv\Scripts\activate
-'''
+</pre>
 
 🐧 Mac / Linux
-'''
+<pre>
 python3 -m venv .venv
 source .venv/bin/activate
-'''
+</pre>
 
 # 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-
-ℹ️ Only standard Python libraries are used so far.
-
 # 🔐 Environment Variables
-
+<pre>
 Create a .env file in the project root:
 
 GRID_API_KEY="YOUR_GRID_API_KEY_HERE"
+</pre>
 
 # ▶️ How to Run the App
 python app.py
 
 ## 📤 Output You Will See
-
+<pre>
 📦 Total normalized events
 
 🔁 Rounds detected
@@ -97,3 +96,4 @@ python app.py
 🧠 Match strategy summary
 
 🎯 Sample round strategies
+</pre>
