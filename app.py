@@ -33,7 +33,7 @@ def main():
     # -------------------------------
     # Step 8b: Player series stats
     # -------------------------------
-    player_stats = compute_player_summary(rounds)
+    player_stats = compute_player_summary(round_stats)
 
     print("\n=== PLAYER SERIES SUMMARY ===")
     for player, stats in player_stats.items():
