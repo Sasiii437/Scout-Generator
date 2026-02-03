@@ -14,22 +14,6 @@ Given raw GRID match event data, the app:
 
 📊 Computes player-level statistics
 
-Kills
-
-Ability usage
-
-Bomb plants & defuses
-
-🧠 Detects round strategies
-
-Utility-heavy
-
-Slow default
-
-Standard pace
-
-📝 Produces scouting-ready summaries
-
 🔮 AI scouting report layer planned, with fallback support if credits expire.
 
 ## 📁 Project Structure
