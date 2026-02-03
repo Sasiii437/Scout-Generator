@@ -35,21 +35,63 @@ Standard pace
 ## 📁 Project Structure
 <pre>
 scout_generator/
-│ 
-├── app.py                         # Main entry point
 │
-├── event_processing/
-│   ├── loader.py                  # Loads raw GRID JSON files
-│   ├── normalizer.py              # Normalizes GRID events
-│   ├── rounds.py                  # Groups events by round
-│   ├── round_stats.py             # Round + player statistics
-│   ├── strategy.py                # Strategy & playstyle detection
-├───data/                          # It will created after executing the code and due to large files not added to repo
+├── app.py                          # Main application entry point
+│
+├── ai_engine/                      # (Planned) AI-based scouting & insights layer
+│
+├── analytics/                      # Higher-level analytics & aggregations
+│
+├── config/                         # Static configuration & mappings
+│   ├── grid_config.py              # GRID API & event configuration
+│   ├── teams.py                    # Team metadata
+│   └── tournaments.py              # Tournament metadata
+│
+├── data/                           # After execution, these will be created
 │   └── raw/
-│       └── events_2629390/         # Sample GRID event data
+│       ├── events_2629390/
+│       │   └── events_2629390_grid.jsonl
+│       ├── events_2629391/
+│       ├── events_2629392/
+│       ├── events_2629393/
+│       ├── events_2629394/
+│       └── events_2629395/
+│
+├── data_ingestion/                 # GRID data fetching & ingestion
+│   ├── series_fetcher.py           # Fetch series data
+│   ├── match_fetcher.py            # Fetch match data
+│   ├── file_download.py            # Download raw GRID files
+│   ├── event_parser.py             # Parse raw GRID event streams
+│   └── central_data.py             # Central ingestion orchestration
+│
+├── event_processing/               # Core event-level processing
+│   ├── base_parser.py              # Shared parsing logic
+│   ├── val_parser.py               # VAL-specific event parsing
+│   ├── lol_parser.py               # LoL-specific event parsing
+│   ├── loader.py                   # Load raw JSONL events
+│   ├── normalizer.py               # Normalize GRID events
+│   ├── rounds.py                   # Group events by round
+│   ├── round_stats.py              # Per-round statistics
+│   ├── player_stats.py             # Player-level aggregations
+│   └── strategy.py                 # Strategy & playstyle detection
+│
+├── intelligence/                   # Scouting logic & heuristics
+│   ├── heuristics.py               # Pattern detection rules
+│   ├── rules.py                    # Domain-specific scouting rules
+│   └── scout_engine.py             # Scouting report generation engine
+│
+├── models/                         # Core data models
+│   ├── event.py                    # Event data model
+│   ├── series.py                   # Series-level model
+│   └── scout_report.py             # Scouting report schema
+│
+├── reports/                        # Generated scouting reports (output)
+│
+├── scoring/                        # (Planned) Scoring & ranking logic
 │
 ├── requirements.txt
 └── README.md
+
 </pre>
 
 # ⚙️ Setup Instructions
