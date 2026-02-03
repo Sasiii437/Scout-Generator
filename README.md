@@ -111,7 +111,9 @@ GRID_API_KEY="YOUR_GRID_API_KEY_HERE"
 </pre>
 
 # ▶️ How to Run the App
+<pre>
 python app.py
+</pre>
 
 ## 📤 Output You Will See
 <pre>
