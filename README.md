@@ -1,4 +1,6 @@
-#### Cloud9 X JetBrains Hackathon [ Sky - The Limit ]
+#### Cloud9 X JetBrains Hackathon [ Sky's - The Limit ] 
+#### Esport Data Provided by GRID
+
 ## 🧠 Automated Scouting Report Generator (VAL / LoL)
 
 An analytics pipeline that processes GRID event-level match data to automatically generate scouting insights such as player tendencies, round strategies, and team playstyles.
