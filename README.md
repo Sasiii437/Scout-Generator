@@ -1,10 +1,10 @@
-###🧠 Automated Scouting Report Generator (VAL / LoL)
+### 🧠 Automated Scouting Report Generator (VAL / LoL)
 
 An analytics pipeline that processes GRID event-level match data to automatically generate scouting insights such as player tendencies, round strategies, and team playstyles.
 
 Designed for esports analysts, coaches, and tournament scouting.
 
-##🚀 What This Project Does
+## 🚀 What This Project Does
 
 Given raw GRID match event data, the app:
 
@@ -32,55 +32,61 @@ Standard pace
 
 🔮 AI scouting report layer planned, with fallback support if credits expire.
 
-##📁 Project Structure
-#scout_generator/
-#│
-#├── app.py                         # Main entry point
-#│
-#├── event_processing/
-#│   ├── loader.py                  # Loads raw GRID JSON files
-#│   ├── normalizer.py              # Normalizes GRID events
-#│   ├── rounds.py                  # Groups events by round
-#│   ├── round_stats.py             # Round + player statistics
-#│   ├── strategy.py                # Strategy & playstyle detection
-#│
-#├── data/
-#│   └── raw/
-#│       └── events_2629390/         # Sample GRID event data
-#│
-#├── requirements.txt
-#└── README.md
+## 📁 Project Structure
+# scout_generator/
+# │ 
+# ├── app.py                         # Main entry point
+# │
+# ├── event_processing/
+# │   ├── loader.py                  # Loads raw GRID JSON files
+# │   ├── normalizer.py              # Normalizes GRID events
+# │   ├── rounds.py                  # Groups events by round
+# │   ├── round_stats.py             # Round + player statistics
+# │   ├── strategy.py                # Strategy & playstyle detection
+# │
+# ├── data/
+# │   └── raw/
+# │       └── events_2629390/         # Sample GRID event data
+# │
+# ├── requirements.txt
+# └── README.md
 
-#⚙️ Setup Instructions
+# ⚙️ Setup Instructions
 1️⃣ Clone the Repository
+'''
 git clone <your-github-repo-url>
 cd scout_generator
+'''
 
-#2️⃣ Create & Activate Virtual Environment
+# 2️⃣ Create & Activate Virtual Environment
 🪟 Windows
+'''
 python -m venv .venv
 .venv\Scripts\activate
+'''
 
 🐧 Mac / Linux
+'''
 python3 -m venv .venv
 source .venv/bin/activate
+'''
 
-#3️⃣ Install Dependencies
+# 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
 
 ℹ️ Only standard Python libraries are used so far.
 
-#🔐 Environment Variables
+# 🔐 Environment Variables
 
 Create a .env file in the project root:
 
 GRID_API_KEY="YOUR_GRID_API_KEY_HERE"
 
-#▶️ How to Run the App
+# ▶️ How to Run the App
 python app.py
 
-📤 Output You Will See
+## 📤 Output You Will See
 
 📦 Total normalized events
 
