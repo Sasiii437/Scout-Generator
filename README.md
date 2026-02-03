@@ -1,22 +1,36 @@
 🧠 Automated Scouting Report Generator (VAL / LoL)
 
 An analytics pipeline that processes GRID event-level match data to automatically generate scouting insights such as player tendencies, round strategies, and team playstyles.
+
 Designed for esports analysts, coaches, and tournament scouting.
 
 🚀 What This Project Does
 
 Given raw GRID match event data, the app:
 
-Normalizes event-level data (VAL / LoL ready)
+✅ Normalizes event-level data (VAL / LoL ready)
 
-Groups events by rounds
+🔄 Groups events by rounds
 
-Computes player-level stats (kills, abilities, plants, defuses)
+📊 Computes player-level statistics
 
-Detects round strategies (utility-heavy, slow default, etc.)
+Kills
 
-Produces scouting-ready summaries
-(AI scouting report layer planned with fallback support)
+Ability usage
+
+Bomb plants & defuses
+
+🧠 Detects round strategies
+
+Utility-heavy
+
+Slow default
+
+Standard pace
+
+📝 Produces scouting-ready summaries
+
+🔮 AI scouting report layer planned, with fallback support if credits expire.
 
 📁 Project Structure
 scout_generator/
@@ -43,15 +57,11 @@ git clone <your-github-repo-url>
 cd scout_generator
 
 2️⃣ Create & Activate Virtual Environment
-
-Windows
-
+🪟 Windows
 python -m venv .venv
 .venv\Scripts\activate
 
-
-Mac / Linux
-
+🐧 Mac / Linux
 python3 -m venv .venv
 source .venv/bin/activate
 
@@ -59,24 +69,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 
-(Only standard Python libraries used so far)
+ℹ️ Only standard Python libraries are used so far.
 
-Add Environment variables
-create .env file and use the below pattern in the file
-GRID_API_KEY="***************************" ( Your API key )
+🔐 Environment Variables
+
+Create a .env file in the project root:
+
+GRID_API_KEY="YOUR_GRID_API_KEY_HERE"
 
 ▶️ How to Run the App
 python app.py
 
+📤 Output You Will See
 
-You will see:
+📦 Total normalized events
 
-Total normalized events
+🔁 Rounds detected
 
-Rounds detected
+👤 Player-level statistics
 
-Player-level stats
+🧠 Match strategy summary
 
-Match strategy summary
-
-Sample round strategies
+🎯 Sample round strategies
