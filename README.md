@@ -44,7 +44,7 @@ scout_generator/
 │   ├── rounds.py                  # Groups events by round
 │   ├── round_stats.py             # Round + player statistics
 │   ├── strategy.py                # Strategy & playstyle detection
-│├── data/
+├───data/                          # It will created after executing the code and due to large files not added to repo
 │   └── raw/
 │       └── events_2629390/         # Sample GRID event data
 │
@@ -55,7 +55,7 @@ scout_generator/
 # ⚙️ Setup Instructions
 1️⃣ Clone the Repository
 <pre>
-git clone <your-github-repo-url>
+git clone https://github.com/Sasiii437/Scout-Generator.git
 cd scout_generator
 </pre>
 
@@ -73,12 +73,13 @@ source .venv/bin/activate
 </pre>
 
 # 3️⃣ Install Dependencies
+<pre>
 pip install -r requirements.txt
+</pre>
 
 # 🔐 Environment Variables
-<pre>
 Create a .env file in the project root:
-
+<pre>
 GRID_API_KEY="YOUR_GRID_API_KEY_HERE"
 </pre>
 
